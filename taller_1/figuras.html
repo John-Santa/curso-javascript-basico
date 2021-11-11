@@ -16,20 +16,71 @@
             <h1 class="title">Figuras geométricas</h1>
             <p>Este es el primer taller del curso practico de javascript</p>
         </header>
-        <section class="form-container">
-            <h2 class="subtitle">Calcula el area y perimetro de un cuadrado</h2>
 
-            <form action="/" class="form">
-                <label for="squareInput" class="label">
-                    <span>Ingresa medida del lado</span>
-                    <input class="input" type="number" name="squareSide" id="squareInput"/>
-                </label>
-                <label for="response" class="label">
-                    <input class="input" type="hidden" name="response" id="response"/>
-                </label>
-                <button class="primary-button" type="button" onclick="calculatePerimeterOfSquare()">Calcular perimetro</button>
-                <button class="primary-button" type="button" onclick="alculateAreaOfSquare()">Calcular Area</button>
-            </form>
+        <section class="form-container">
+            <article>
+                <h2 class="subtitle">Calcula el area y perimetro de un cuadrado</h2>
+
+                <form action="/" class="form">
+                    <label for="squareInput" class="label">
+                        <span>Ingresa medida del lado</span>
+                        <input class="input" type="number" name="squareSide" id="squareInput"/>
+                    </label>
+                    <label for="response" class="label">
+                        <input class="input" type="hidden" name="response" id="response"/>
+                    </label>
+                    <button class="primary-button" type="button" onclick="calculatePerimeterOfSquare()">Calcular perimetro</button>
+                    <button class="primary-button" type="button" onclick="calculateAreaOfSquare()">Calcular Area</button>
+                </form>
+            </article>
+        </section>
+
+        <section class="form-container">
+            <article>
+                <h2 class="subtitle">Calcula el area y perimetro de un triangulo</h2>
+
+                <form action="/" class="form">
+                    <label for="sideInput" class="label">
+                        <span>Ingresa medida del cateto</span>
+                        <input class="input" type="number" name="side" id="sideInput"/>
+                    </label>
+                    <label for="hypotenuseInput" class="label">
+                        <span>Ingresa medida de la hipotenusa</span>
+                        <input class="input" type="number" name="hypotenuse" id="hypotenuseInput"/>
+                    </label>
+                    <label for="baseInput" class="label">
+                        <span>Ingresa medida de la base</span>
+                        <input class="input" type="number" name="base" id="baseInput"/>
+                    </label>
+                    <label for="heightInput" class="label">
+                        <span>Ingresa altura del triangulo</span>
+                        <input class="input" type="number" name="height" id="heightInput"/>
+                    </label>
+                    <label for="responseTriangle" class="label">
+                        <input class="input" type="hidden" name="response" id="responseTriangle"/>
+                    </label>
+                    <button class="primary-button" type="button" onclick="calculatePerimeterOfTriangle()">Calcular perimetro</button>
+                    <button class="primary-button" type="button" onclick="calculateAreaOfTriangle()">Calcular Area</button>
+                </form>
+            </article>
+        </section>
+
+        <section class="form-container">
+            <article>
+                <h2 class="subtitle">Calcula el area y perimetro de un circulo</h2>
+
+                <form action="/" class="form">
+                    <label for="circleInput" class="label">
+                        <span>Ingresa medida del radio</span>
+                        <input class="input" type="number" name="radio" id="circleInput"/>
+                    </label>
+                    <label for="responseCircle" class="label">
+                        <input class="input" type="hidden" name="response" id="responseCircle"/>
+                    </label>
+                    <button class="primary-button" type="button" onclick="calculatePerimeterOfCircle()">Calcular perimetro</button>
+                    <button class="primary-button" type="button" onclick="calculateAreaOfCircle()">Calcular Area</button>
+                </form>
+            </article>
         </section>
     </main>
     <script src="figuras.js"></script>

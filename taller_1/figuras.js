@@ -29,31 +29,62 @@ let calculateDiameter = (radio) => {
 
 let perimeterOfCircle = (circleDiameter) => {
     const PI = Math.PI;
-    return circleDiameter * PI;
+    return (circleDiameter * PI).toFixed(2);
 };
 
 let circleArea = (radio) => {
     const PI = Math.PI;
-    return (radio**2) * PI;
+    return ((radio**2) * PI).toFixed(2);
 };
 
 let circleDiameter = calculateDiameter(4);
 
 //Interaction with html
 
-function calculatePerimeterOfSquare(params) {
-    const squareInput = document.getElementById('squareInput');
-    const squareInputValue = squareInput.value;
-    const perimeter = perimeterOfSquare(squareInputValue);
+function calculatePerimeterOfSquare() {
+    const side = document.getElementById('squareInput').value;
+    const perimeter = perimeterOfSquare(side);
     document.getElementById('response').value = `El perimetro es: ${perimeter} cm`;
     document.getElementById('response').type = 'text';
 }
 
 
-function alculateAreaOfSquare(params) {
-    const squareInput = document.getElementById("squareInput");
-    const squareInputValue = squareInput.value;
-    const area = squareArea(squareInputValue);
+function calculateAreaOfSquare() {
+    const squareInput = document.getElementById('squareInput').value;
+    const area = squareArea(squareInput);
     document.getElementById('response').value = `El area es: ${area} cm^2`;
     document.getElementById('response').type = 'text';
+}
+
+function calculatePerimeterOfTriangle() {
+    const side = document.getElementById('sideInput').value;
+    const hypotenuse = document.getElementById('hypotenuseInput').value;
+    const base = document.getElementById('baseInput').value;
+    const perimeter = perimeterOfTriangle(side, hypotenuse, base);
+    document.getElementById('responseTriangle').value = `El perimetro es: ${perimeter} cm`;
+    document.getElementById('responseTriangle').type = 'text';
+}
+
+function calculateAreaOfTriangle() {
+    const base = document.getElementById('baseInput').value;
+    const height = document.getElementById('heightInput').value;
+    const area = triangleArea(base, height);
+    document.getElementById('responseTriangle').value = `El area es: ${area} cm^2`;
+    document.getElementById('responseTriangle').type = 'text';
+}
+
+function calculatePerimeterOfCircle() {
+    const radio = document.getElementById('circleInput').value;
+    const diameter = calculateDiameter(radio);
+    const perimeter = perimeterOfCircle(diameter);
+    document.getElementById('responseCircle').value = `El perimetro es: ${perimeter} cm`;
+    document.getElementById('responseCircle').type = 'text';
+}
+
+
+function calculateAreaOfCircle() {
+    const radio = document.getElementById('circleInput').value;
+    const area = circleArea(radio);
+    document.getElementById('responseCircle').value = `El area es: ${area} cm^2`;
+    document.getElementById('responseCircle').type = 'text';
 }
