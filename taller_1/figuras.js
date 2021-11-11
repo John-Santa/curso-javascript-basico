@@ -18,6 +18,15 @@ let triangleArea = (base, height) => {
     return (base * height) / 2;
 };
 
+let triangleHeight = (side, base) => {
+    if (side === base) {
+        let height = Math.sqrt((side**2)-((base**2)/4));
+        console.log(`La altura es ${height}`);
+    }else{
+        console.error(`La longitud de a: ${side} y b: ${base} son diferentes`)
+    }
+}
+
 
 
 //Circle code
@@ -63,6 +72,8 @@ function calculatePerimeterOfTriangle() {
     const perimeter = perimeterOfTriangle(side, hypotenuse, base);
     document.getElementById('responseTriangle').value = `El perimetro es: ${perimeter} cm`;
     document.getElementById('responseTriangle').type = 'text';
+
+    triangleHeight(side, base);
 }
 
 function calculateAreaOfTriangle() {
