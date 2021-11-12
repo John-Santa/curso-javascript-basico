@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;500&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Porcentajes y descuentos | Curso practico de JS</title>
+</head>
+<body>
+    <main class="main">
+        <header>
+            <h1 class="title">Porcentajes y descuentos</h1>
+            <p>Este es el segundo taller del curso practico de javascript</p>
+        </header>
+
+        <section class="form-container">
+            <article>
+                <h2 class="subtitle">Calcula el precio a pagar de tus productos.</h2>
+
+                <form action="/" class="form">
+                    <label for="originalPrice" class="label">
+                        <span>Ingresa precio del producto</span>
+                        <input class="input" type="number" name="originalPrice" id="originalPrice"/>
+                    </label>
+                    <label for="discount" class="label">
+                        <span>Ingresa descuento</span>
+                        <input class="input" type="number" name="discount" id="discount"/>
+                    </label>
+                    <label for="response" class="label">
+                        <p id="response"></p>
+                    </label>
+                    <button class="primary-button" type="button" onclick="calculateFinalPrice()">Calcular precio</button>
+                </form>
+            </article>
+        </section>
+    </main>
+
+    <script src="descuentos.js"></script>
+</body>
+</html>
